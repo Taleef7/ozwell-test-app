@@ -1,0 +1,165 @@
+/* src/App.css */
+
+/* 
+  1. Global Reset & Dark Theme
+  2. Container & Layout
+  3. Header & Nav
+  4. Card Sections
+  5. Forms & Buttons
+*/
+
+/* 1. Global Reset & Dark Theme */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000; /* Pure black background */
+  color: #fff;            /* White text */
+}
+
+/* 2. Container & Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Center the content vertically & horizontally if desired */
+.main-content {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; /* If you want it from the top, use 'flex-start'. 
+                                  If you want it fully centered, change to 'center'. */
+  padding: 2rem 1rem;
+}
+
+/* 3. Header & Nav */
+.app-header {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid #333;
+}
+
+/* Navigation buttons */
+.tab-nav button {
+  background-color: #222; 
+  color: #fff;
+  border: 3px solid #333; 
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.tab-nav button:hover {
+  background-color: #333;
+  border-color: #444;
+}
+
+.tab-nav button.active-tab {
+  background-color: #5c5c5c;
+  border-color: #808080;
+  font-weight: bold;
+}
+
+/* 4. Card Sections */
+.content-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: #1c1c1c; /* Slightly lighter than pure black, but still quite dark */
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.content-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* 5. Forms & Buttons */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"] {
+  background: #222; 
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #666;
+}
+
+button[type="submit"],
+button[type="button"],
+button:not(.active-tab) {
+  background: #444; 
+  color: #fff;
+  border: 1px solid #555;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #555;
+  border-color: #666;
+}
+
+
+/* In App.css or Chat.css if you have one */
+.chat-response {
+  margin-top: 1rem;
+  background-color: #222;       /* A dark gray box, or choose any color you like */
+  border: 1px solid #444;       /* Subtle border */
+  border-radius: 8px;           /* Rounded corners for a bubble-like look */
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* For the label or heading inside the bubble (Ozwell Response:) */
+.chat-response strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
